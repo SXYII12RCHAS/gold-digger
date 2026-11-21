@@ -93,6 +93,7 @@ body {
     padding: 28px 26px 22px;
     background: radial-gradient(ellipse 60% 55% at 50% 72%, rgba(240, 199, 94, 0.22), transparent 70%), #11231a;
     border-bottom: 1px solid var(--bezel);
+    perspective: 600px;
 }
 
 .showcase__ingot {
@@ -101,6 +102,8 @@ body {
     height: auto;
     image-rendering: pixelated;
     filter: drop-shadow(0 14px 12px rgba(0, 0, 0, 0.45));
+    transform: rotateX(0deg) rotateY(0deg);
+    will-change: transform;
 }
 
 .showcase__note {
