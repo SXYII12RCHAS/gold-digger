@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/assets/gold-ingot.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="/live.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Digger</title>
+</head>
+<body>
+    <main class="terminal">
+        <header class="terminal__head">
+            <h1 class="wordmark">Gold Digger</h1>
+            <p class="status">
+                <span class="status__light" aria-hidden="true"></span>
+                <span id="connection-status">disconnected</span>
+            </p>
+        </header>
+
+        <div class="showcase">
+            <img class="showcase__ingot" src="/assets/gold-ingot.png" alt="A gold ingot" width="196">
+            <p class="showcase__note">Live bullion desk</p>
+        </div>
+
+        <section class="quote" aria-label="Live gold price">
+            <span class="quote__label">Live price</span>
+            <div class="quote__figure">
+                <input id="live-price" type="text" value="—" aria-label="Live gold price per ounce" readonly>
+                <span class="quote__unit">USD / oz</span>
+            </div>
+        </section>
+
+        <form id="invest-form" class="invest">
+            <label class="invest__label" for="investment-amount">Amount to invest</label>
+            <div class="invest__field">
+                <span aria-hidden="true">$</span>
+                <input type="text" id="investment-amount" inputmode="decimal" placeholder="10,000">
+            </div>
+            <button class="invest__button" type="submit">Invest now</button>
+        </form>
+    </main>
+</body>
+</html>
